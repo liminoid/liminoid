@@ -91,7 +91,7 @@ class Logo extends Component {
         this.animate();
         clearInterval(timerId);
       }
-    }, 50);
+    }, 100);
   }
 
   render(props) {
