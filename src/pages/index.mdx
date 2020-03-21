@@ -1,0 +1,74 @@
+import { Box, Flex, Button } from 'rebass'
+import {
+  Banner,
+  NavGrid,
+  Container,
+  Grid,
+  LogoGrid,
+} from '..'
+import Logo from '../components/logo'
+
+
+<Banner>
+<LogoGrid>
+<Logo size={20} speed={1000}/>
+<div>
+
+<h1 style={{fontSize: '1.3em', marginTop: '1.3em'}}>Local-first interactive Python documents</h1>
+
+```sh
+npm i liminoid
+```
+
+</div>
+</LogoGrid>
+<Box my='auto' />
+<NavGrid>
+
+- [Introduction](/overview/introduction)
+- [Hello Liminoid](/overview/hello-liminoid)
+- [LMX](/guides/lmx)
+- [Liminoid.js](/guides/javascript)
+- [<Liminoid /\>](/guides/react)
+- [Liminoid + Observable](/guides/observable)
+- [Jupyter Notebooks](/guides/jupyter)
+- [Deployment](/guides/deployment)
+- [A/B Test Dashboard](/examples/ab-test)
+- [Epidemic Model w/ Sympy](/examples/epidemic-model)
+- [Interactive ML Evaluation](/examples/machine-learning-eval)
+- [API Reference](/reference/javascript)
+- [Getting Help](/overview/help)
+- [Github](https://github.com/liminoid)
+- [Chat](https://matrix.to/#/+liminoid:matrix.org)
+- [Twitter](https://twitter.com/liminoid_io)
+
+</NavGrid>
+</Banner>
+
+<Container py={5}>
+
+<Grid py={5} sx={{ fontWeight: 'bold' }}>
+
+- Safe 🔐 code runs in a sandboxed [Web Assembly](https://webassembly.org/) environment.
+- Fast 🏎 near-native speed using background Web Workers.
+- Scalable 🏗 client-side execution means browsers are also servers!
+- [Local-first][local] 📵 offline by default... kill your WiFi and try the console 👆
+- Private 🕵️ no code or data ever leaves your computer.
+- Lightweight 🪁 **~4kb** JS runtime that lazy-loads [Pyodide](https://github.com/iodide-project/pyodide) Wasm modules.
+- Multiplicitous 👯 run multiple concurrent Python interpreters.
+
+</Grid>
+
+## Get Started
+
+Like a Jupyter, Observable, and RMarkdown love child... with a heavy dose of [Idyll](https://idyll-lang.org/)-spiration that's as easy as putting code fences in your markdown 🙌
+
+<Button as='a'
+  variant='big'
+  href='/overview/introduction'>
+  Read the docs
+</Button>
+
+</Container>
+
+[local]: https://www.inkandswitch.com/local-first.html
