@@ -87,7 +87,7 @@ class Logo extends Component {
   componentDidMount() {
     // check if mojs loaded yet
     let timerId = setInterval(() => {
-      if (typeof mojs !== 'undefined') {
+      if (typeof mojs !== 'undefined' && document.body) {
         this.animate();
         clearInterval(timerId);
       }
