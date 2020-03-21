@@ -26,9 +26,9 @@ export default props => {
       />
       <meta
         name="twitter:image"
-        content="https://liminoid.io/images/logo.gif"
+        content="https://liminoid.io/images/logo.png"
       />
-      <meta name="twitter:image:alt" content="Liminoid animated logo" />
+      <meta name="twitter:image:alt" content="Liminoid logo" />
     </Helmet>
   );
 };
