@@ -87,7 +87,7 @@ class Logo extends Component {
   componentDidMount() {
     // check if mojs loaded yet
     let timerId = setInterval(() => {
-      if (typeof mojs !== 'undefined' && document.body) {
+      if (typeof mojs !== 'undefined') {
         this.animate();
         clearInterval(timerId);
       }
@@ -98,7 +98,7 @@ class Logo extends Component {
     return (
       <>
         <Helmet>
-          <script src="https://cdn.jsdelivr.net/npm/@mojs/core"></script>
+          <script defer src="https://cdn.jsdelivr.net/npm/@mojs/core"></script>
         </Helmet>
         <Text
           style={{ fontSize: `${this.size * 4}px`, fontFamily: 'neon' }}
