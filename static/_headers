@@ -1,0 +1,2 @@
+/external/*
+    Access-Control-Allow-Origin: *
