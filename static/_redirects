@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://nifty-shaw-f959b5.netlify.com/* https://liminoid.io/:splat 301!
