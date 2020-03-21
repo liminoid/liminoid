@@ -17,6 +17,7 @@ export default props => {
         content="Local-first interactive Python documents."
       />
       <link href="fonts/fonts.css" rel="stylesheet" />
+
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="@liminoid_io" />
       <meta name="twitter:title" content={title} />
@@ -26,7 +27,7 @@ export default props => {
       />
       <meta
         name="twitter:image"
-        content="https://liminoid.io/images/logo.png"
+        content="https://liminoid.io/images/icon.png"
       />
       <meta name="twitter:image:alt" content="Liminoid logo" />
     </Helmet>
