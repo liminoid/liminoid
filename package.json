@@ -1,0 +1,67 @@
+{
+  "name": "liminoid.io",
+  "version": "0.0.1",
+  "description": "Website and documentation source for the Liminoid project.",
+  "private": true,
+  "keywords": [
+    "javascript",
+    "web assembly",
+    "python",
+    "pyodide",
+    "repl"
+  ],
+  "author": {
+    "name": "Jonathan Dinu",
+    "url": "https://jonathanjonathanjonathan.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/liminoid/liminoid.io",
+  "bugs": "https://github.com/liminoid/liminoid.io/issues",
+  "repository": {
+    "url": "https://github.com/liminoid/liminoid.io.git",
+    "type": "git"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true
+  },
+  "dependencies": {
+    "@jxnblk/react-live": "^2.1.2-1",
+    "@mdx-js/mdx": "^1.1.4",
+    "@mojs/core": "^0.288.2",
+    "@rebass/forms": "^4.0.6",
+    "@rebass/layout": "^4.0.6",
+    "@rebass/preset": "^4.0.5",
+    "@rebass/preset-material": "^4.0.5",
+    "@rebass/space": "^4.0.5",
+    "@theme-ui/presets": "^0.3.0",
+    "@theme-ui/prism": "^0.3.0",
+    "@theme-ui/sidenav": "^0.3.1",
+    "countries-list": "^2.4.3",
+    "deepmerge": "^4.0.0",
+    "gatsby": "^2.13.48",
+    "gatsby-cli": "^2.11.0",
+    "gatsby-plugin-catch-links": "^2.1.2",
+    "gatsby-plugin-mdx": "^1.0.22",
+    "gatsby-plugin-react-helmet": "^3.1.3",
+    "gatsby-plugin-theme-ui": "^0.3.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
+    "rebass": "^4.0.7",
+    "remark-slug": "^5.1.2",
+    "theme-ui": "^0.3.1"
+  },
+  "devDependencies": {},
+  "peerDependencies": {}
+}
