@@ -10,7 +10,9 @@ class Logo extends Component {
     };
     this.size = props.size;
     this.speed = props.speed;
+  }
 
+  componentDidMount() {
     document.fonts.ready.then(fontFaceSet => {
       this.setState({ left: '0' });
       this.setState({
@@ -18,9 +20,7 @@ class Logo extends Component {
           'Neon, Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif'
       });
     });
-  }
 
-  componentDidMount() {
     const motionQuery = window.matchMedia('(prefers-reduced-motion)');
 
     const COLORS = {
