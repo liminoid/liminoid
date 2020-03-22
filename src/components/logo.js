@@ -110,7 +110,7 @@ class Logo extends Component {
             marginRight: `${this.size}px`,
             letterSpacing: '0.125em',
             fontSize: `${this.size * 4}px`,
-            fontFamily: this.state.fonts
+            fontFamily: 'Neon'
           }}
           className="flicker"
         >
@@ -128,7 +128,7 @@ class Logo extends Component {
             marginLeft: `${this.size + 10}px`,
             letterSpacing: '0.125em',
             fontSize: `${this.size * 4}px`,
-            fontFamily: this.state.fonts
+            fontFamily: 'Neon'
           }}
           className="flicker"
         >
