@@ -39,7 +39,7 @@ class Logo extends Component {
     const speed = this.speed || 1000;
     const origin = '50% 50%';
     const left = '50%';
-    const top = '57%';
+    const top = '50%';
     const delay = 0;
     const repeat = Number.MAX_SAFE_INTEGER;
     const duration = 10000; // 'rand(1000, 1005)';
@@ -59,8 +59,8 @@ class Logo extends Component {
       duration: duration,
       fillOpacity: fillOpacity,
       radius: this.size,
-      //ease: ease,
-      //isYoyo: true,
+      ease: ease,
+      isYoyo: true,
       repeat: repeat,
       speed: speed,
       delay: delay
@@ -83,8 +83,8 @@ class Logo extends Component {
       fillOpacity: fillOpacity,
       duration: duration,
       radius: this.size,
-      //ease: ease,
-      //isYoyo: true,
+      ease: ease,
+      isYoyo: true,
       repeat: repeat,
       speed: speed,
       delay: delay
@@ -110,7 +110,7 @@ class Logo extends Component {
             marginRight: `${this.size}px`,
             letterSpacing: '0.125em',
             fontSize: `${this.size * 4}px`,
-            fontFamily: 'Neon'
+            fontFamily: this.state.fonts
           }}
           className="flicker"
         >
@@ -120,7 +120,8 @@ class Logo extends Component {
           id="logo"
           style={{
             position: 'relative',
-            display: 'inline'
+            display: 'inline',
+            bottom: '1em'
           }}
         ></div>
         <span
