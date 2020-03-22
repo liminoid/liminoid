@@ -19,6 +19,10 @@
     <a href="https://twitter.com/liminoid_io">
       Twitter
     </a>
+    <span> | </span>
+    <a href="https://stackoverflow.com/questions/tagged/liminoid">
+      Stack Overflow
+    </a>
   </h3>
 </div>
 
