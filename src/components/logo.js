@@ -59,8 +59,8 @@ class Logo extends Component {
       duration: duration,
       fillOpacity: fillOpacity,
       radius: this.size,
-      ease: ease,
-      isYoyo: true,
+      //ease: ease,
+      //isYoyo: true,
       repeat: repeat,
       speed: speed,
       delay: delay
@@ -83,8 +83,8 @@ class Logo extends Component {
       fillOpacity: fillOpacity,
       duration: duration,
       radius: this.size,
-      ease: ease,
-      isYoyo: true,
+      //ease: ease,
+      //isYoyo: true,
       repeat: repeat,
       speed: speed,
       delay: delay

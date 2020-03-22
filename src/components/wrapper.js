@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 import { Box, Flex } from 'rebass';
 import { globalHistory } from '@reach/router';
 
-const breadcrumbRoutes = ['guides', 'recipes'];
+const breadcrumbRoutes = [];
 
 export const Breadcrumbs = ({ title }) => {
   const { location } = globalHistory;
