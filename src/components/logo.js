@@ -101,8 +101,6 @@ class Logo extends Component {
     return (
       <Text
         style={{
-          fontSize: `${this.size * 4}px`,
-          fontFamily: this.state.fonts,
           position: 'relative',
           left: this.state.left
         }}
@@ -110,7 +108,9 @@ class Logo extends Component {
         <span
           style={{
             marginRight: `${this.size}px`,
-            letterSpacing: '0.125em'
+            letterSpacing: '0.125em',
+            fontSize: `${this.size * 4}px`,
+            fontFamily: this.state.fonts
           }}
           className="flicker"
         >
@@ -126,7 +126,9 @@ class Logo extends Component {
         <span
           style={{
             marginLeft: `${this.size + 10}px`,
-            letterSpacing: '0.125em'
+            letterSpacing: '0.125em',
+            fontSize: `${this.size * 4}px`,
+            fontFamily: this.state.fonts
           }}
           className="flicker"
         >
