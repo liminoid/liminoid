@@ -1,27 +1,22 @@
-@font-face {
-  font-family: 'neon';
-  src: url('Neon.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'VCR';
-  src: url('VCR.ttf') format('truetype');
-}
-
 .flicker {
   text-shadow: 0.06rem 0 0.06rem #f0b, -0.125rem 0 0.06rem #0ff;
-  letter-spacing: 0.125em;
   animation-duration: 0.7s;
-  animation-name: textflicker;
+  animation-name: liminal;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 
-@keyframes textflicker {
+@keyframes liminal {
   from {
     text-shadow: 1px 0 0 #f0b, -2px 0 0 #0ff;
   }
   to {
     text-shadow: 2px 0.5px 2px #f0b, -1px -0.5px 2px #0ff;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flicker {
+    animation: none;
   }
 }

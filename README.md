@@ -28,7 +28,7 @@ Open an issue or post a message in the [chatroom](https://matrix.to/#/!CPoHZRWLr
 
 ## Citing
 
-While not required, when using (or extending) Liminoid for academic work, citations are appreciated 🙏:
+While not required, when using (or extending) Liminoid for academic work, citations are appreciated 🙏
 
 ```
 @software{liminoid,

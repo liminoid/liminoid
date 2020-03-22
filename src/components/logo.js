@@ -1,15 +1,28 @@
 import React, { Component } from 'react';
-import { Helmet } from 'react-helmet';
 import { Text } from 'rebass';
 
 class Logo extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      left: '-100vw',
+      fonts: 'Neon'
+    };
     this.size = props.size;
     this.speed = props.speed;
+
+    document.fonts.ready.then(fontFaceSet => {
+      this.setState({ left: '0' });
+      this.setState({
+        fonts:
+          'Neon, Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif'
+      });
+    });
   }
 
-  animate() {
+  componentDidMount() {
+    const motionQuery = window.matchMedia('(prefers-reduced-motion)');
+
     const COLORS = {
       white: '#ffffff',
       black: '#000000',
@@ -21,8 +34,6 @@ class Logo extends Component {
       hotpink: '#f0b'
     };
     const blendMode = 'screen';
-    const repeat = Number.MAX_SAFE_INTEGER;
-    const duration = 'rand(1000, 1005)';
     const ease = 'circ.inout';
     const fillOpacity = 1;
     const speed = this.speed || 1000;
@@ -30,7 +41,9 @@ class Logo extends Component {
     const left = '50%';
     const top = '57%';
     const delay = 0;
-    const x = { [-2]: 2 };
+    const repeat = Number.MAX_SAFE_INTEGER;
+    const duration = 10000; // 'rand(1000, 1005)';
+    const motion = { [-2]: 2 };
     const callback = (isForward, isYoyo) => {
       this.duration = duration;
     };
@@ -40,14 +53,14 @@ class Logo extends Component {
       top: top,
       origin: origin,
       shape: 'circle',
-      x: x,
+      x: -2, // motionQuery.matches ? -2 : motion,
       fill: COLORS.cyan,
       isShowEnd: false,
       duration: duration,
       fillOpacity: fillOpacity,
       radius: this.size,
-      ease: ease,
-      isYoyo: true,
+      //ease: ease,
+      //isYoyo: true,
       repeat: repeat,
       speed: speed,
       delay: delay
@@ -65,13 +78,13 @@ class Logo extends Component {
       top: top,
       origin: origin,
       shape: 'circle',
-      x: x,
+      x: 2, //motionQuery.matches ? 2 : motion,
       isShowEnd: false,
       fillOpacity: fillOpacity,
       duration: duration,
       radius: this.size,
-      ease: ease,
-      isYoyo: true,
+      //ease: ease,
+      //isYoyo: true,
       repeat: repeat,
       speed: speed,
       delay: delay
@@ -84,49 +97,42 @@ class Logo extends Component {
     circle2.play();
   }
 
-  componentDidMount() {
-    // check if mojs loaded yet
-    let timerId = setInterval(() => {
-      if (typeof mojs !== 'undefined') {
-        this.animate();
-        clearInterval(timerId);
-      }
-    }, 100);
-  }
-
   render(props) {
     return (
-      <>
-        <Helmet>
-          <script defer src="https://cdn.jsdelivr.net/npm/@mojs/core"></script>
-        </Helmet>
-        <Text
-          style={{ fontSize: `${this.size * 4}px`, fontFamily: 'neon' }}
+      <Text
+        style={{
+          fontSize: `${this.size * 4}px`,
+          fontFamily: this.state.fonts,
+          position: 'relative',
+          left: this.state.left
+        }}
+      >
+        <span
+          style={{
+            marginRight: `${this.size}px`,
+            letterSpacing: '0.125em'
+          }}
           className="flicker"
         >
-          <span
-            style={{
-              marginRight: `${this.size}px`
-            }}
-          >
-            Limin
-          </span>
-          <div
-            id="logo"
-            style={{
-              position: 'relative',
-              display: 'inline'
-            }}
-          ></div>
-          <span
-            style={{
-              marginLeft: `${this.size + 10}px`
-            }}
-          >
-            id
-          </span>
-        </Text>
-      </>
+          Limin
+        </span>
+        <div
+          id="logo"
+          style={{
+            position: 'relative',
+            display: 'inline'
+          }}
+        ></div>
+        <span
+          style={{
+            marginLeft: `${this.size + 10}px`,
+            letterSpacing: '0.125em'
+          }}
+          className="flicker"
+        >
+          id
+        </span>
+      </Text>
     );
   }
 }

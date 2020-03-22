@@ -47,7 +47,6 @@
     "@theme-ui/presets": "^0.3.0",
     "@theme-ui/prism": "^0.3.0",
     "@theme-ui/sidenav": "^0.3.1",
-    "countries-list": "^2.4.3",
     "deepmerge": "^4.0.0",
     "gatsby": "^2.13.48",
     "gatsby-cli": "^2.11.0",
