@@ -1,14 +1,15 @@
 {
   "name": "liminoid.io",
   "version": "0.0.1",
-  "description": "Website and documentation source for the Liminoid project.",
+  "description": "Website and documentation source for the Liminoid ecosystem.",
   "private": true,
   "keywords": [
     "javascript",
     "web assembly",
     "python",
     "pyodide",
-    "repl"
+    "repl",
+    "liminoid"
   ],
   "author": {
     "name": "Jonathan Dinu",
