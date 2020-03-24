@@ -37,7 +37,7 @@ While not required, when using (or extending) Liminoid for academic work, citati
 ```
 @software{liminoid,
   author = {Jonathan Dinu},
-  title = {Liminoid: Local-first interactive Python documents},
+  title = {Liminoid: Web assembly building blocks for local-first analytics applications},
   url = {https://github.com/liminoid},
   version = {0.0.1},
   month = {March},

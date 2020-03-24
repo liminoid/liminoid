@@ -14,7 +14,7 @@ export default props => {
       <link rel="icon" href="images/favicon.gif" type="image/gif"></link>
       <meta
         name="description"
-        content="Web assembly components for building local-first programming environments"
+        content="Web assembly building blocks for local-first analytics applications"
       />
       <link href="liminal.css" rel="stylesheet" />
 
@@ -23,7 +23,7 @@ export default props => {
       <meta name="twitter:title" content={title} />
       <meta
         name="twitter:description"
-        content="Web assembly components for building local-first programming environments"
+        content="Web assembly building blocks for local-first analytics applications"
       />
       <meta
         name="twitter:image"
