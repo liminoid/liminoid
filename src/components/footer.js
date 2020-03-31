@@ -13,10 +13,7 @@ export default props => (
       <Link href="https://github.com/liminoid" variant="nav">
         Github
       </Link>
-      <Link
-        href="https://matrix.to/#/!CPoHZRWLrkbgPuzGpU:matrix.org/$cw1qJZO_Ykr4rPF5_Of3OXGg_4j8E4LkqdkFqGFGA_U?via=matrix.org"
-        variant="nav"
-      >
+      <Link href="https://discord.gg/sa7MwxY" variant="nav">
         Chat
       </Link>
       <Link href="https://twitter.com/liminoid_io" variant="nav">

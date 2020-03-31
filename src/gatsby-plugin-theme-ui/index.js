@@ -159,6 +159,12 @@ export default merge(preset, {
     h4: { variant: 'text.heading' },
     h5: { variant: 'text.heading' },
     h6: { variant: 'text.heading' },
+    strong: {
+      color: 'secondary'
+    },
+    em: {
+      color: 'accent'
+    },
     table: {
       width: '100%',
       borderCollapse: 'separate',

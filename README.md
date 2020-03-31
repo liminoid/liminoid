@@ -8,11 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://liminoid.io">
-      Documentation
-    </a>
-    <span> | </span>
-    <a href="https://matrix.to/#/!CPoHZRWLrkbgPuzGpU:matrix.org/$cw1qJZO_Ykr4rPF5_Of3OXGg_4j8E4LkqdkFqGFGA_U?via=matrix.org">
+    <a href="https://discord.gg/sa7MwxY">
       Chatroom
     </a>
     <span> | </span>
@@ -28,7 +24,7 @@
 
 ## Contributing/Requests
 
-Open an issue or post a message in the [chatroom](https://matrix.to/#/!CPoHZRWLrkbgPuzGpU:matrix.org/$cw1qJZO_Ykr4rPF5_Of3OXGg_4j8E4LkqdkFqGFGA_U?via=matrix.org).
+Open an [issue]](https://github.com/liminoid/liminoid.io/issues) or post a message in the [chatroom](https://discord.gg/sa7MwxY).
 
 ## Citing
 
