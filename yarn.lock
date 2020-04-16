@@ -8141,10 +8141,10 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
-liminoid-mdx@^0.0.13:
-  version "0.0.13"
-  resolved "https://registry.yarnpkg.com/liminoid-mdx/-/liminoid-mdx-0.0.13.tgz#1bdd785ba6f709c8f6688da9614e4de298896b6d"
-  integrity sha512-4Ulolyv7EVnRumWn71vEGXidTVn9TzTk0jX2fMRuKurItjTAUPdgOadGsyv1rKhOlDScg4S/M6Eg/joRDpIAAA==
+liminoid-mdx@^0.0.14:
+  version "0.0.14"
+  resolved "https://registry.yarnpkg.com/liminoid-mdx/-/liminoid-mdx-0.0.14.tgz#86e0073ba751d1592c5f2010b1bc38340133077a"
+  integrity sha512-U42Z6ym1VmwgED9bGs2rpDf59U8a6Sc5mnIce8ICxmIGJ1BtPfDEwSXRdrGFmbwwN2/f9CcaZEQHoetRXJwHfg==
   dependencies:
     liminoid-react "^0.0.18"
     unist-util-visit "^2.0.2"
