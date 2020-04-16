@@ -1,0 +1,26 @@
+export const title = 'Command Line';
+
+# Command Line Interface
+
+```sh
+$ yarn global add liminoid
+```
+
+or
+
+```sh
+$ npm install -g liminoid
+```
+
+## Usage
+
+```sh
+$ liminoid --help
+```
+
+<!-- prettier-ignore -->
+|  command  | argument | description  |
+| :--------:  |:--:| :--------- |
+| `liminoid new [name]` | `[name]`: Name of project | Scaffold a new Liminoid application. <br/>Creates a directory of `[name]` in the current working directory.  |
+|  `liminoid develop`  | `.` | Start live reloading development server. |
+|   `liminoid build`   | `.` | Compile markdown, MDX, or JSX/React files into a self contained bundle. |

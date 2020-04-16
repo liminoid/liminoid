@@ -1,3 +1,21 @@
 export const title = 'Deploying Liminoid';
 
 # Deploying Liminoid
+
+Since Liminoid projects are bundled into standalone modules, the `./build` directory is a self contained static site (or whichever path you specify in `liminoid build -o [output]`). You can open `./build/index.html` with a web browser or upload the `./build` directory to any static site hosting provider (like [Surge](https://surge.sh/), [Github Pages](https://pages.github.com/), [Netlify](https://www.netlify.com/), or [S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html)).
+
+## Example
+
+The code snippet below picks up where the [quick start](/overview/quick-start) left off and walks through uploading a project to [Github Pages](https://pages.github.com/). The same general workflow should be applicable to any static site host however.
+
+```sh
+$ liminoid build # in the root of the project
+
+$ git init
+$ git checkout -b gh-pages
+$ git add ./build
+$ git commit -m "Github Pages"
+
+$ git remote add origin https://github.com/[user]/[user].github.io.git
+$ git push -u origin gh-pages
+```

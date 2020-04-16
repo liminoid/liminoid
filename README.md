@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://discord.gg/sa7MwxY">
+    <a href="https://discord.gg/6FdvJka">
       Chatroom
     </a>
     <span> | </span>
@@ -19,12 +19,16 @@
     <a href="https://stackoverflow.com/questions/tagged/liminoid">
       Stack Overflow
     </a>
+    <span> | </span>
+    <a href="https://liminoid.io/contributing/">
+      Contributing
+    </a>
   </h3>
 </div>
 
 ## Contributing/Requests
 
-Open an [issue]](https://github.com/liminoid/liminoid.io/issues) or post a message in the [chatroom](https://discord.gg/sa7MwxY).
+Open an [issue](https://github.com/liminoid/liminoid.io/issues) or post a message in the [chatroom](https://discord.gg/6FdvJka). If you would like to contribute to the project (code, documentation, tutorials, etc.) see the [contributing guide](https://liminoid.io/contributing/) for how to get started 🙌
 
 ## Citing
 

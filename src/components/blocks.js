@@ -12,6 +12,17 @@ export const Container = props => (
   />
 );
 
+export const Hero = props => (
+  <Box
+    {...props}
+    sx={{
+      maxWidth: '400px',
+      mx: 'auto',
+      px: 4
+    }}
+  />
+);
+
 export const Banner = props => (
   <Box
     {...props}
@@ -27,6 +38,39 @@ export const Banner = props => (
         flexDirection: 'column',
         maxWidth: 'wide',
         minHeight: 'calc(100vh - 64px)',
+        mx: 'auto',
+        px: 4,
+        py: [4, 5],
+        h1: {
+          variant: 'text.caps',
+          fontSize: 3
+        },
+        pre: {
+          p: 0,
+          mb: 0,
+          bg: 'transparent'
+        }
+      }}
+    >
+      {props.children}
+    </Box>
+  </Box>
+);
+
+export const Stripe = props => (
+  <Box
+    {...props}
+    sx={{
+      color: 'background',
+      bg: 'text'
+    }}
+  >
+    <Box
+      sx={{
+        // '*': { outline: '1px solid rgba(0, 255, 255, 0.5)', },
+        display: 'flex',
+        flexDirection: 'column',
+        maxWidth: 'wide',
         mx: 'auto',
         px: 4,
         py: [4, 5],

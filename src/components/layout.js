@@ -94,11 +94,18 @@ export default props => {
     <div>
       <SkipLink />
       <Head {...props} />
-      <Header fullwidth={fullwidth} menu={menu} setMenu={setMenu} nav={nav} />
       {!fullwidth ? (
-        <Sidebar {...props} nav={nav} open={menu} setMenu={setMenu}>
-          <main id="content">{props.children}</main>
-        </Sidebar>
+        <>
+          <Header
+            fullwidth={fullwidth}
+            menu={menu}
+            setMenu={setMenu}
+            nav={nav}
+          />
+          <Sidebar {...props} nav={nav} open={menu} setMenu={setMenu}>
+            <main id="content">{props.children}</main>
+          </Sidebar>
+        </>
       ) : (
         <main id="content">{props.children}</main>
       )}

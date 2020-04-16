@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  LiveProvider,
-  LivePreview,
-  LiveEditor,
-  LiveError
-} from '@jxnblk/react-live';
+import { LiveProvider, LivePreview, LiveEditor, LiveError } from 'react-live';
 import { ThemeProvider } from 'theme-ui';
 import Prism from '@theme-ui/prism';
 import * as Rebass from 'rebass';

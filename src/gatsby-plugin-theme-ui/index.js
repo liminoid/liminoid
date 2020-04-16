@@ -3,37 +3,16 @@ import merge from 'lodash.merge';
 import prism from '@theme-ui/prism/presets/theme-ui';
 
 export default merge(preset, {
-  initialColorModeName: 'lite',
   colors: {
-    text: '#000',
-    background: '#fff',
-    primary: '#a0c',
-    secondary: '#0ff',
-    accent: '#f0b',
-    muted: '#f6f6ff',
-    gray: '#444',
+    text: '#f8f8f2',
+    background: '#44475a',
+    primary: '#bd93f9',
+    secondary: '#8be9fd',
+    accent: '#ff79c6',
+    muted: '#282a36',
+    gray: '#50fa7b',
     lightgray: '#cfcfd3',
     modes: {
-      sorbet: {
-        text: '#f8f8f2',
-        background: '#44475a',
-        primary: '#bd93f9',
-        secondary: '#8be9fd',
-        accent: '#ff79c6',
-        muted: '#282a36',
-        gray: '#50fa7b',
-        lightgray: '#cfcfd3'
-      },
-      lite: {
-        text: '#000',
-        background: '#fff',
-        primary: '#a0c',
-        secondary: '#0ff',
-        accent: '#f0b',
-        muted: '#f6f6ff',
-        gray: '#444',
-        lightgray: '#cfcfd3'
-      },
       dark: {
         text: '#fff',
         background: '#000',
@@ -42,33 +21,53 @@ export default merge(preset, {
         accent: '#f0b',
         muted: '#111',
         gray: '#999',
-        lightgray: '#444'
-      }
-    }
+        lightgray: '#444',
+      },
+      lite: {
+        text: '#000',
+        background: '#fff',
+        primary: '#a0c',
+        secondary: '#b0f',
+        accent: '#ec13b2',
+        muted: '#f6f6ff',
+        gray: '#444',
+        lightgray: '#cfcfd3',
+      },
+      sorbet: {
+        text: '#f8f8f2',
+        background: '#44475a',
+        primary: '#bd93f9',
+        secondary: '#8be9fd',
+        accent: '#ff79c6',
+        muted: '#282a36',
+        gray: '#50fa7b',
+        lightgray: '#cfcfd3',
+      },
+    },
   },
   fontWeights: {
     body: 400,
     heading: 800,
-    bold: 700
+    bold: 700,
   },
   sizes: {
-    wide: 1280
+    wide: 1280,
   },
   shadows: {
-    small: `0 0 0px 1px rgba(0, 0, 0, 0.25)`
+    small: `0 0 0px 1px rgba(0, 0, 0, 0.25)`,
   },
   buttons: {
     big: {
       variant: 'buttons.primary',
       px: 4,
       py: 3,
-      fontSize: 3
+      fontSize: 3,
     },
     outline: {
       variant: 'buttons.primary',
       color: 'primary',
       bg: 'transparent',
-      boxShadow: 'inset 0 0 0 2px'
+      boxShadow: 'inset 0 0 0 2px',
     },
     transparent: {
       color: 'inherit',
@@ -76,9 +75,9 @@ export default merge(preset, {
       ':hover,:focus': {
         color: 'primary',
         outline: 'none',
-        boxShadow: '0 0 0 2px'
-      }
-    }
+        boxShadow: '0 0 0 2px',
+      },
+    },
   },
   links: {
     nav: {
@@ -88,8 +87,8 @@ export default merge(preset, {
       color: 'inherit',
       textDecoration: 'none',
       fontSize: 1,
-      fontWeight: 'normal'
-    }
+      fontWeight: 'normal',
+    },
   },
   text: {
     heading: {
@@ -97,10 +96,10 @@ export default merge(preset, {
         color: 'inherit',
         textDecoration: 'none',
         ':hover': {
-          textDecoration: 'underline'
-        }
-      }
-    }
+          textDecoration: 'underline',
+        },
+      },
+    },
   },
   variants: {
     badge: {
@@ -108,25 +107,48 @@ export default merge(preset, {
       px: 2,
       color: 'background',
       bg: 'primary',
-      borderRadius: 'circle'
-    }
+      borderRadius: 'circle',
+    },
+    info: {
+      borderLeft: '0.5em solid',
+      borderColor: 'primary',
+      padding: '1em',
+      margin: '2em 0',
+      bg: 'muted',
+    },
+    warning: {
+      borderLeft: '0.5em solid',
+      borderColor: 'secondary',
+      padding: '1em',
+      margin: '2em 0',
+      bg: 'muted',
+    },
+    danger: {
+      borderLeft: '0.5em solid',
+      borderColor: 'accent',
+      padding: '1em',
+      margin: '2em 0',
+      bg: 'muted',
+    },
   },
   styles: {
     a: {
       color: 'primary',
       transition: 'color .2s ease-out',
       ':hover,:focus': {
-        color: 'secondary'
-      }
+        color: 'secondary',
+      },
     },
     inlineCode: {
       fontFamily: 'monospace',
       fontSize: '93.75%',
-      color: 'secondary'
+      color: 'secondary',
     },
     code: {
       fontFamily: 'monospace',
-      color: 'secondary'
+      color: 'secondary',
+      whiteSpace: 'pre-wrap',
+      fontSize: '100%',
     },
     pre: {
       ...prism,
@@ -135,80 +157,83 @@ export default merge(preset, {
       overflowX: 'auto',
       bg: 'muted',
       p: 3,
-      borderRadius: 4
+      borderRadius: 4,
+      marginTop: '2em',
+      marginBottom: '2em',
     },
     blockquote: {
       p: 0,
       mx: 0,
       fontWeight: 'bold',
-      fontSize: 3
+      fontSize: 3,
     },
     h1: {
       variant: 'text.heading',
       mt: 0,
-      fontSize: [5, 6]
+      fontSize: [5, 6],
     },
     h2: {
       variant: 'text.heading',
-      fontSize: [4, 5]
+      fontSize: [4, 5],
     },
     h3: {
       variant: 'text.heading',
-      fontSize: 3
+      fontSize: 3,
     },
     h4: { variant: 'text.heading' },
     h5: { variant: 'text.heading' },
     h6: { variant: 'text.heading' },
     strong: {
-      color: 'secondary'
+      color: 'secondary',
     },
     em: {
-      color: 'accent'
+      color: 'accent',
     },
     table: {
       width: '100%',
       borderCollapse: 'separate',
-      borderSpacing: 0
+      borderSpacing: 0,
     },
     th: {
       py: 2,
       textAlign: 'left',
-      borderBottom: t => `4px solid ${t.colors.muted}`
+      borderBottom: (t) => `4px solid ${t.colors.muted}`,
     },
     td: {
       py: 2,
+      padding: '0 1em',
       textAlign: 'left',
-      borderBottom: t => `1px solid ${t.colors.muted}`
-    }
+      borderBottom: (t) => `1px solid ${t.colors.muted}`,
+    },
   },
   forms: {
     label: {
       fontSize: 1,
-      fontWeight: 'bold'
+      fontWeight: 'bold',
     },
     field: {
       borderColor: 'lightgray',
       ':focus': {
         borderColor: 'primary',
         outline: 'none',
-        boxShadow: t => `0 0 0 2px ${t.colors.primary}`
-      }
+        boxShadow: (t) => `0 0 0 2px ${t.colors.primary}`,
+      },
     },
     input: {
-      variant: 'forms.field'
+      variant: 'forms.field',
     },
     select: {
-      variant: 'forms.field'
+      variant: 'forms.field',
     },
     textarea: {
-      variant: 'forms.field'
+      variant: 'forms.field',
     },
     radio: {},
     slider: {
-      bg: 'lightgray'
+      bg: 'lightgray',
     },
     switch: {
       // thumb: {}
-    }
-  }
+    },
+  },
 });

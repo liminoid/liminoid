@@ -1,0 +1,58 @@
+import { Card, Image, Text, Box, Link } from 'rebass';
+
+export const title = 'Quick Start';
+
+# Quick Start
+
+<a href="/images/quickstart.mp4">
+  <Image src="/images/quickstart.gif" alt="Quickstart animated GIF" />
+</a>
+
+<Box variant="danger">
+  Python code fences ✨automagically✨ get turned into editors that run in the
+  browser!
+</Box>
+
+```sh
+$ yarn global add liminoid # or `npm install -g liminoid`
+$ liminoid new cool-project
+$ cd cool-project
+
+$ vsc . # open pwd with VS Code (or your editor of choice)
+$ liminoid develop # start live reloading development server
+
+$ liminoid build # compile files into a static standalone bundle
+
+$ yarn global add surge # or `npm install --global surge`
+$ surge ./build # deploy to the surge.sh CDN
+```
+
+<Box variant="info">
+
+If you want to share your project with the world, it is as easy as uploading
+`./build` to a static site host (like [Surge](https://surge.sh/)). See the [Deploying guide](/guides/deployment) for a walkthrough with other hosts.
+
+</Box>
+
+## Example output
+
+```python packages=['numpy']; onResult=(res) => alert('You can pass results to a Javscript callback: ' + res);
+import numpy as np
+
+# tolist() ensures that no weird type conversion happens going from numpy -> JS arrays
+np.random.binomial(10, 0.3, 5).tolist()
+```
+
+<!--
+
+## Next steps
+
+- Try the online [Liminoid editor](https://try.liminoid.io)
+
+- Read the [slow start](/guides/slow-start/)
+    - Check out the guides for:
+    - [Jupyter](/guides/jupyter/)
+    - [Observable](/guides/observable/)
+- Say hello in the [chatroom](https://discord.gg/6FdvJka) or [@liminoid_io](https://twitter.com/liminoid_io)
+
+-->

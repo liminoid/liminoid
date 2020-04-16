@@ -1,3 +1,34 @@
+import { Card, Image, Text, Box, Link } from 'rebass';
+
 export const title = 'Introduction';
 
 # Introduction
+
+Liminoid is a toolkit for building [local-first][local-first] interactive analytics applications (powered by [WebAssembly](https://webassembly.org/)). It is a set of modular projects designed to have a [low floor but high ceiling](http://www.papert.org) that can be used together (or independently). If you just want to jump in and get started building something, see the [quick start](/overview/quick-start/). For a description of the Liminoid packages and the technologies they are built on.... read on!
+
+## Ecosystem
+
+There are various packages and building blocks that make up Liminoid. Each targets a different abstraction level with its API (from **highest** to **lowest**):
+
+- [liminoid-cli](/reference/cli/)
+- [liminoid-mdx](/guides/markdown/)
+- [liminoid-react](/reference/react/)
+- [liminoid-js](/reference/javascript/)
+
+### Command line interface
+
+The fastest way to start using Liminoid is through the **CLI** which _scaffolds_ out new projects, has a built in live reloading _development server_, and finally _builds_ projects into self contained bundles that can be deployed to any static site host (like [Surge.sh](https://surge.sh/) or [Github Pages](https://pages.github.com/)). Think of the [liminoid-cli](/reference/cli/) as something analogous to the [Rails CLI](https://guides.rubyonrails.org/command_line.html).
+
+### Markdown
+
+The command line interface is really just a friendly utility to process [liminoid-mdx](/guides/markdown/). Liminoid MDX allows you to transform **Markdown** [code fences](https://help.github.com/en/github/writing-on-github/creating-and-highlighting-code-blocks) into interactive editors that execute in the browser. The library itself is implemented as a [MDX plugin](https://mdxjs.com/advanced/plugins) and can be used with any [framework](https://mdxjs.com/getting-started#installation-guides) that supports MDX.
+
+### <Liminoid /\>
+
+Going [one more turtle down](https://en.wikipedia.org/wiki/Turtles_all_the_way_down#/media/File:River_terrapin.jpg), [liminoid-mdx](/guides/markdown/) is really just a bit of syntactic sugar to more easily use the [liminoid-react](/reference/react/) component in content centric Markdown documents. But if you are building an HTML based application (like most things on the web), the **<Liminoid /\>** React component allows you to more easily use Limimoid as a building block in a larger [component hierarchy](https://reactjs.org/docs/thinking-in-react.html#step-1-break-the-ui-into-a-component-hierarchy).
+
+### Javascript
+
+At the bottom of this [castell](https://en.wikipedia.org/wiki/Castell) rests the humble [pinya](https://www.castellersdebarcelona.cat/wp-content/uploads/2014/03/cartell.jpg) package: the **Javascript REPL**. Without [liminoid-js](/reference/javascript/), none of the other pacakges would be possible.... but much like the assemblers of the 50's, it is rare that you would use [liminoid-js](/reference/javascript/) directly (in this day and age).
+
+[local-first]: https://www.inkandswitch.com/local-first.html

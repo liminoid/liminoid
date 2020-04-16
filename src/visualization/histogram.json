@@ -1,0 +1,33 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 500,
+  "height": 304,
+  "mark": {
+    "type": "bar"
+  },
+  "transform": [{ "bin": { "maxbins": 50 }, "field": "data", "as": "binned" }],
+  "encoding": {
+    "x": {
+      "field": "binned",
+      "title": "Difference of Conversion Rates (P_b - P_a)",
+      "bin": { "binned": true },
+      "type": "quantitative"
+    },
+    "x2": { "field": "binned_end" },
+    "y": {
+      "aggregate": "count",
+      "type": "quantitative",
+      "axis": { "title": "Count of Bootstrapped Samples" }
+    },
+    "tooltip": {
+      "aggregate": "count",
+      "type": "quantitative"
+    },
+    "color": {
+      "condition": {
+        "value": "#ff79c6"
+      },
+      "value": "rgb(68, 71, 90)"
+    }
+  }
+}

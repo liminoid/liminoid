@@ -1,0 +1,43 @@
+import { Card, Image, Text, Box, Link } from 'rebass';
+
+# FAQ (w/ answers)
+
+<Text color="secondary" fontSize="1.5em" fontWeight="bold">
+  Local-what?
+</Text>
+
+Ironically as _frequent_ connectivity turns to _ubiquitous_ connectivity, users are starting to prioritize offline experiences to avoid the ever increasing surveillance of a data hungry corporate enterprise. And as open web standards like [WebAssembly](https://webassembly.org/), [WebRTC](https://en.wikipedia.org/wiki/WebGPU), [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API), and [WebGPU](https://en.wikipedia.org/wiki/WebGPU) are making the browser more **native**, we can now run applications “locally" in a web browser that typically were only possible in server backed applications.
+
+While [local-first][local-first] might seem like a rebradining of the [offline-first](http://offlinefirst.org/) (or even [zeroconf](http://www.zeroconf.org/)) ethos, there is a subtle difference. Local-first can be seen as a superset of offline-first with the difference being in its intention: _local even in the presence of strong connectivity_. And this shift highlights the fact that even if you have high bandwidth access, there are still ancillary **privacy/security** benefits to keeping computation and data local.
+
+<Text color="secondary" fontSize="1.5em" fontWeight="bold">
+  So this is like Jupyter notebooks?
+</Text>
+
+While Liminoid fills a similar niche (_literate computational programming_) and uses a similar interaction paradigm (_embedded cell based REPLs_), the intended uses are somewhat different. You **can** use Liminoid documents for interactive data science, but Jupyter will likely be a _much better tool_ if you need an IDE like experience. Probably more explicitly though, Jupyter is a much larger project, supports multiple languages, and has a rich and mature ecosystem of complimentary projects. In comparison, think of Liminoid as more similar to an interactive [nbviewer](https://nbviewer.jupyter.org/). Once you have iterated on some analysis in Jupyter or you have some results that you want to share, then Liminoid really steps up to the plate and ✨**shines**✨.
+
+<Text color="secondary" fontSize="1.5em" fontWeight="bold">
+
+Oh, gotcha! Like [binder](https://mybinder.org/) then?
+
+</Text>
+
+Almost. `binder` comes from a use case of reproducible research and as such it prioritizes _data/environment/code encapsulation_ in order to produce consistent results. With Liminoid, we ~sort of~ get this for free since [WebAssembly](https://webassembly.org/) provides a consistent virtual machine abstraction (and might even [replace Docker](https://twitter.com/solomonstre/status/1111004913222324225?s=20) 😱), but Liminoid was not exactly designed for this purpose and WebAssembly is not _quite_ there yet.
+
+Liminoid currently uses [Pyodide](https://pyodide.readthedocs.io/en/latest/) for its WebAssembly Python interpreter and its scientific Python [packages](https://github.com/iodide-project/pyodide/tree/master/packages). As such, it is currently a bit difficult to use [impure Python packages](https://packaging.python.org/guides/distributing-packages-using-setuptools/#pure-python-wheels) and still cumbersome to bundle pure Python packages for the interpreter (especially specific versions of specific packages). If you start your analysis with the latest Pyodide supported [packages](https://github.com/iodide-project/pyodide/tree/master/packages), everything will likely be gravy, but that may be a big _if_ for certain projects.
+
+For these packaging sacrifices, Liminoid provides _locality_, _scalability_, and _sustainability_. **Locality** in that no data or code needs to be sent to a server to execute (and even works without an internet connection). Since all code executes in the browser, Liminoid is "infinitely" **scalable** w.r.t. the number of concurrent users. And while `binder` is fortunate to have the support of various (hopefully well intentioned) cloud service providers, this does make it _dependent_ on the good will of those companies/institutions.
+
+<Text color="secondary" fontSize="1.5em" fontWeight="bold">
+
+Wait... so this _is_ just [Pyodide](https://alpha.iodide.io/)??
+
+</Text>
+
+While Liminoid internally uses [Pyodide](https://pyodide.readthedocs.io/en/latest/) (for now), the use case and abstractions Liminoid targets are quite different. The Pyodide project really was borne to serve [Iodide](https://alpha.iodide.io/) and does a great job at that. The compromise it makes for this however, is that it is somewhat coupled to the Iodide use case. This results in Pyodide being a little cumbersome to integrate into other applications. If you want a zero configuation browser based _scientific Python development environment_, definitely use Pyodide over Liminoid.
+
+If however, you are interested in building _end-user applications_ that can leverage extensible in-browser Python interpreters, Liminoid might be a better fit. In this sense, you can think of Iodide as a higher level application that **could** be built with the lower level Liminoid packages (w/ the distinction being reminiscent of the framework vs. library dichotomy).
+
+[![framework versus library](https://www.programcreek.com/wp-content/uploads/2011/09/framework-vs-library.png)](https://www.programcreek.com/2011/09/what-is-the-difference-between-a-java-library-and-a-framework/)
+
+[local-first]: https://www.inkandswitch.com/local-first.html

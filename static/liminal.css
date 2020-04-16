@@ -20,3 +20,7 @@
     animation: none;
   }
 }
+
+#liminoid-1 {
+  min-width: 600px;
+}

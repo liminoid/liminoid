@@ -16,7 +16,7 @@ export default props => {
         name="description"
         content="Web assembly toolkit for building local-first analytics applications"
       />
-      <link href="liminal.css" rel="stylesheet" />
+      <link href="/liminal.css" rel="stylesheet" />
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="@liminoid_io" />

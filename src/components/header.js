@@ -3,7 +3,7 @@ import { Flex, Box, Link, Button } from 'rebass';
 import { useColorMode } from 'theme-ui';
 import { useLocation } from '@reach/router';
 
-const modes = ['sorbet', 'lite', 'dark'];
+const modes = ['dark', 'sorbet'];
 
 const Burger = ({ size = 24 }) => (
   <Box
@@ -15,21 +15,21 @@ const Burger = ({ size = 24 }) => (
     viewBox="0 0 24 24"
     sx={{
       display: 'block',
-      margin: 0
+      margin: 0,
     }}
   >
     <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
   </Box>
 );
 
-const Dot = props => (
+const Dot = (props) => (
   <svg
     viewBox="0 0 32 32"
     width="24"
     height="24"
     fill="currentcolor"
     style={{
-      display: 'block'
+      display: 'block',
     }}
   >
     <circle
@@ -52,14 +52,14 @@ const Dot = props => (
 
 export default ({ nav, menu, setMenu, fullwidth }) => {
   const [mode, setMode] = useColorMode();
-  const cycleMode = e => {
+  const cycleMode = (e) => {
     const i = (modes.indexOf(mode) + 1) % modes.length;
     setMode(modes[i]);
   };
   const location = useLocation();
-  if (location.pathname === '/') {
-    setMode(modes[1]);
-  }
+  // if (location.pathname === '/') {
+  //   setMode('sorbet');
+  // }
 
   return (
     <Flex as="header" px={3} py={2} height={64} alignItems="center">
@@ -70,10 +70,10 @@ export default ({ nav, menu, setMenu, fullwidth }) => {
           sx={{
             width: 32,
             height: 32,
-            p: 1
+            p: 1,
           }}
           variant="transparent"
-          onClick={e => {
+          onClick={(e) => {
             setMenu(!menu);
             if (menu || !nav.current) return;
             const navlink = nav.current.querySelector('a');
@@ -98,7 +98,7 @@ export default ({ nav, menu, setMenu, fullwidth }) => {
             width: 32,
             height: 32,
             p: 1,
-            borderRadius: 99999
+            borderRadius: 99999,
           }}
           onClick={cycleMode}
         >

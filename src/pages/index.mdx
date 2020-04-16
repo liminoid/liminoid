@@ -1,58 +1,109 @@
-import { Box, Flex, Button } from 'rebass'
-import {
-  Banner,
-  NavGrid,
-  Container,
-  Grid,
-  LogoGrid,
-} from '..'
-import Logo from '../components/logo'
+import { Box, Flex, Button } from 'rebass';
+import { Banner, Stripe, NavGrid, Container, Grid, LogoGrid } from '..';
+import Logo from '../components/logo';
+import histogram from '../visualization/histogram.js';
 
-
-<Banner>
+<Banner bg='background' color='text' sx={{ py: 0}}>
 <LogoGrid>
 <Logo size={20} speed={0}/>
 <div>
 
-<h1 style={{fontSize: '1.3em', marginTop: '1.3em'}}>A modular toolkit for building<br />local-first analytics applications</h1>
+<h1 style={{ fontSize: '1.5em', marginTop: '1.3em' }}>
+  Toolkit for building local-first interactive analytics applications
+</h1>
 
 ```sh
-npm i liminoid
+npm install -g liminoid
+liminoid new cool-project
 ```
 
 </div>
 </LogoGrid>
-<Box my='auto' />
+
+<LogoGrid>
+<Box style={{ fontSize: '0.9em'}} mt="70px" mb="1em" mx="auto">
+
+```python packages=['numpy']; console=false; onResult=(res) => histogram(res);
+import numpy as np; from numpy.random import binomial, choice
+
+n, p_a, p_b, boots = 10000, 0.1, 0.3, 500 # 👈 Edit these!
+
+# simulate some users.....
+trials = binomial(1, p_a, n), binomial(1, p_b, n)
+
+# Bootstrap A/B test with 95% confidence intervals
+samples = []
+for _ in range(boots):
+    a, b = map(lambda d: choice(d, size=n, replace=True), trials)
+    samples.append(b.mean() - a.mean())
+
+samples, np.percentile(samples, 2.5), np.percentile(samples, 97.5)
+```
+
+</Box>
+
+<Box mt="70px" mb="1em" ml="auto" mr="-38px">
+<div id="viz"></div>
+</Box>
+</LogoGrid>
+
 <Grid py={5} sx={{ fontWeight: 'normal' }}>
 
 - **Safe** 🔐 code runs in a sandboxed Web Assembly environment.
 - **Fast** 🏎 near-native speed using background Web Workers.
 - **Modular** ⚙️ use as many (or as few) of the component libraries as needed.
 - **Offline-by-default** 📵 kill your WiFi and try the console 👆
-- **Private** 🕵️ no code or data ever leaves your computer (unless you want it to).
-- **Scalable** 🏗 client-side execution means browsers are also servers!
-- **W3** 👯 built with emerging open web standards and technologies.
+- **Private** 🕵️ code & data never leaves your computer (unless you want it to).
+- **Sustainable** ♻️ not dependent on corporations' donated server cycles.
+- **W3** 🕸 built with emerging open web standards and technologies.
 - **Relaxing** 🛋 as easy as putting code fences in your markdown.
+
+<!-- - **Scalable** 🏗 client-side execution means browsers are also servers! -->
+
+<!-- - **zero-infra** 🏗 client-side execution means browsers are also servers! -->
 
 </Grid>
 </Banner>
 
-<Container py={5}>
+<Stripe>
+<Container style={{ paddingBottom: '4em'}}>
 
-## Get Started
+## Getting Started 🚀
 
-<Button as='a'
-  variant='primary'
-  href='/overview/introduction/' mr='1em'>
+Like if Jupyter, R Markdown, and Observable had a love child... with a heavy dose of [Idyll](https://idyll-lang.org/)-spiration ✨
+
+<Button
+  as="a"
+  variant="primary"
+  sx={{ backgroundColor: 'accent' }}
+  href="/overview/introduction/"
+  mr="1em"
+>
   Read the docs
 </Button>
 
-<Button as='a'
-  variant='outline'
-  href='/examples/machine-learning-eval/'>
-  Try it online!
+<Button as="a" variant="outline" sx={{ color: 'accent' }} href="/overview/faq/">
+  FAQ
 </Button>
 
 </Container>
+</Stripe>
+<Stripe bg="background" color="text">
+<Container py={5}>
+
+## Getting Involved 🙌
+
+All help is greatly appreciated 🙏 This can be bug reports, tutorials, documentation, code contributions, etc. or even if you share a cool project you built with Liminoid!
+
+<Box variant='danger'>
+
+Say hello in the chat 👇, open an [issue](https://github.com/liminoid), or read the [contributing guide](/contributing/).
+
+</Box>
+
+<br />
+<iframe src="https://discordapp.com/widget?id=694363499006263379&theme=dark" width="300" height="200" allowtransparency="true" frameborder="0"></iframe>
+</Container>
+</Stripe>
 
 [local]: https://www.inkandswitch.com/local-first.html

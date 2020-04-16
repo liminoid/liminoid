@@ -1,0 +1,112 @@
+import { Card, Image, Text, Box, Link } from 'rebass';
+
+export const title = 'Contributing';
+
+# Contributing
+
+Thank you for you interest in contributing to [Liminoid](https://github.com/liminoid) 🙏 A good first step is saying hello in the [chatroom](https://discord.gg/6FdvJka). A good second step is figuring out how you might want to contribute!
+
+## Ways to Contribute
+
+Contributing doesn't mean having to write code™ and it is often the other (less tangible) contributions that really make a project successful (and fun):
+
+1. [Spread the word](#spread-the-word)
+2. [Help others](#help-others)
+3. [🔎🐛🐞🐜](#find-bugs)
+4. [Committing code](#committers-guide)
+
+<Box variant="danger">
+
+Regardless of how you want to get involved, please note that this community follows and enforces an inclusive [Code of Conduct](/code-of-conduct). By participating you agree to abide by its terms.
+
+</Box>
+
+## Spread the word
+
+The _easiest_ way to contribute is by spreading the word! This could be sharing a project you built with Liminoid, telling a friend who might be interested, or chiming in on social media [@liminoid_io](https://twitter.com/liminoid_io) 🤗
+
+## Help others
+
+The most _impactful_ way to contribute is by helping others. You could write a tutorial or guide on how to use Liminoid, improve the documentation, or answer questions on [Stack Overflow](https://stackoverflow.com/questions/tagged/liminoid).
+
+## Find bugs
+
+If you find a bug or have a suggestion on how to make Liminoid better, first check the issues of the relevant sub-project on [Github](https://github.com/liminoid). If there isn't an existing outstanding issue, feel free to inquire in the [chatroom](https://discord.gg/6FdvJka) or create a new issue.
+
+## Committers' Guide
+
+If you would like to help develop Liminoid, a good starting place is to familiarize yourself with the [sub-projects](https://github.com/liminoid) to figure out how/where you might want to contribute. Looking at any of the existing issues in any of the repositories can provide more bite-sized tasks and writing more tests is a gentle way to familiarize yourself with the code. Before working on fixing a bug, developing a new feature, or writing code, ask if anyone is already working on something similar in the [chatroom](https://discord.gg/6FdvJka) to find potential collaborators and to prevent duplicating work.
+
+### Setting up your environment
+
+Each repository may have slighty difference development dependencies (listed in `package.json`) but generally any pacakge that is:
+
+- **bundled** uses [ES6 modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) and [Rollup](https://rollupjs.org)
+- **transpiled** uses [Babel](https://babeljs.io/) with the latest [ES6 class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) syntax enabled.
+- **formatted** uses [Pretttier](https://prettier.io/) for styling and [ESLint](https://eslint.org/) for linting (loosely following Airbnb's [guide](https://github.com/airbnb/javascript))
+- **documented** uses [MDX](https://mdxjs.com/) (and Markdown) for integrating components into the documentation.
+
+<Box variant="info">
+
+The [colophon](/colophon/) is also a good reference of the libraries and pacakges that Liminoid uses.
+
+</Box>
+
+### Example
+
+Below is an example of how to get started contributing to the [Javascript REPL](https://github.com/liminoid/liminoid-js) (and interface to WebAssembly/Pyodide).
+
+```sh
+$ git clone https://github.com/[my-fork]/liminoid-js.git
+$ cd liminoid-js
+```
+
+#### Install the devDependencies
+
+```sh
+$ yarn install
+```
+
+#### Write some code
+
+```sh
+$ vsc . # open pwd with VS Code (or your editor of choice)
+```
+
+#### Run the automated tests
+
+```sh
+$ yarn test
+```
+
+#### Format the contribution
+
+```sh
+$ yarn lint
+```
+
+#### Send it back
+
+```sh
+$ git add [changed files]
+$ git status # check what you are committing
+$ git commit -m "Describe the feature/bug addressed"
+```
+
+<Box variant="danger">
+
+We generally follow the [Github flow](https://guides.github.com/introduction/flow/) and the [fork and pull model](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests).
+
+</Box>
+
+### Versioning
+
+TLDR; from https://semver.org/:
+
+Given a version number **MAJOR.MINOR.PATCH**, increment the:
+
+- **MAJOR** version when you make incompatible API changes,
+- **MINOR** version when you add functionality in a backwards-compatible manner, and
+- **PATCH** version when you make backwards-compatible bug fixes.
+
+Long(er) read: https://nodesource.com/blog/semver-a-primer/
