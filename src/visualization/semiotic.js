@@ -2,22 +2,6 @@ import React from 'react';
 import Loadable from '@loadable/component';
 import faker from 'faker';
 
-// ```python packages=['networkx']; console=false; onResult=(res) => Network(res, 'viz');
-// import networkx as nx
-
-// population, connections = 50, 5 # 👈 Edit me!
-
-// # simulate a small world.... after all.
-// G = nx.barabasi_albert_graph(population, connections)
-
-// # where would vaccinations be most impactful?
-// bc = nx.betweenness_centrality(G)
-// nx.set_node_attributes(G, { k: {"centrality": v} for k,v in bc.items() })
-
-// # export graph as JSON
-// nx.readwrite.json_graph.node_link_data(G)
-// ```
-
 import './semiotic.css';
 const NetworkFrame = Loadable(() => import('semiotic/lib/NetworkFrame'));
 
