@@ -1,3 +1,6 @@
+external/
+python/
+
 # Macs.... amirite?
 .DS_Store
 
@@ -62,7 +65,7 @@ typings/
 
 # gatsby files
 .cache/
-public
+public/
 
 # Yarn
 yarn-error.log

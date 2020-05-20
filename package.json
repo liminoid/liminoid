@@ -23,12 +23,15 @@
     "type": "git"
   },
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build && rm -f public/.DS_STORE",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "invalidate": "aws cloudfront create-invalidation --distribution-id EL93GMBFOQEUK --paths \"/*\"",
+    "sync": "aws s3 sync public s3://liminoid.io --delete",
+    "deploy": "npm run clean && npm run build && npm run sync && npm run invalidate",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "prettier": {
@@ -39,7 +42,7 @@
   "dependencies": {
     "@agentofuser/remark-oembed": "^1.0.4",
     "@loadable/component": "^5.12.0",
-    "@mdx-js/mdx": "^1.1.4",
+    "@mdx-js/mdx": "^1.6.1",
     "@mojs/core": "^0.288.2",
     "@rebass/forms": "^4.0.6",
     "@rebass/layout": "^4.0.6",
@@ -51,16 +54,16 @@
     "@theme-ui/sidenav": "^0.3.1",
     "deepmerge": "^4.0.0",
     "faker": "^4.1.0",
-    "gatsby": "^2.20.22",
-    "gatsby-cli": "^2.11.8",
-    "gatsby-plugin-catch-links": "^2.1.2",
-    "gatsby-plugin-mdx": "^1.0.22",
-    "gatsby-plugin-react-helmet": "^3.1.3",
+    "gatsby": "^2.21.37",
+    "gatsby-cli": "^2.12.24",
+    "gatsby-plugin-catch-links": "^2.3.1",
+    "gatsby-plugin-mdx": "^1.2.9",
+    "gatsby-plugin-react-helmet": "^3.3.1",
     "gatsby-plugin-theme-ui": "^0.3.0",
-    "gatsby-source-filesystem": "^2.2.2",
-    "liminoid-mdx": "^0.0.16",
+    "gatsby-source-filesystem": "^2.3.5",
+    "liminoid-mdx": "^0.0.17",
     "mermaid.cli": "^0.5.1",
-    "prettier": "^2.0.4",
+    "prettier": "^2.0.5",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^6.0.0",
@@ -75,13 +78,11 @@
     "theme-ui": "^0.3.1"
   },
   "devDependencies": {
-    "@loadable/babel-plugin": "^5.12.0",
-    "@loadable/webpack-plugin": "^5.12.0",
     "gatsby-remark-code-buttons": "^2.0.4",
-    "gatsby-transformer-remark": "^2.7.1",
-    "vega": "^5.10.1",
-    "vega-embed": "^6.6.0",
-    "vega-lite": "^4.10.4"
+    "gatsby-transformer-remark": "^2.8.10",
+    "vega": "^5.12.1",
+    "vega-embed": "^6.8.0",
+    "vega-lite": "^4.12.2"
   },
   "peerDependencies": {}
 }
