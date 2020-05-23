@@ -23,7 +23,8 @@
     "type": "git"
   },
   "scripts": {
-    "build": "gatsby build && rm -f public/.DS_STORE",
+    "build": "gatsby build",
+    "build-s3": "gatsby build && rm -f public/.DS_STORE",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
