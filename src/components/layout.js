@@ -8,22 +8,22 @@ import Footer from './footer';
 import Nav from './nav';
 import EditLink from './edit-link';
 
-const Sidebar = props => (
+const Sidebar = (props) => (
   <Flex>
     <Box
       ref={props.nav}
       open={props.open}
-      onClick={e => {
+      onClick={(e) => {
         props.setMenu(false);
       }}
-      onBlur={e => {
+      onBlur={(e) => {
         props.setMenu(false);
       }}
-      onFocus={e => {
+      onFocus={(e) => {
         props.setMenu(true);
       }}
       style={{
-        transform: props.open ? 'translateX(0)' : 'translateX(-100%)'
+        transform: props.open ? 'translateX(0)' : 'translateX(-100%)',
       }}
       sx={{
         position: ['fixed', 'sticky'],
@@ -45,19 +45,19 @@ const Sidebar = props => (
         transform: [, 'none !important'],
         ul: {
           listStyle: 'none',
-          padding: 0
+          padding: 0,
           //color: "blue"
         },
         a: {
-          variant: 'links.nav'
+          variant: 'links.nav',
         },
         'li > ul > li > a': {
-          pl: '48px'
+          pl: '48px',
         },
         'li > ul': {
-          marginBottom: '30px'
+          marginBottom: '30px',
           //color: "black"
-        }
+        },
       }}
     >
       <Nav />
@@ -70,7 +70,7 @@ const Sidebar = props => (
         minHeight: 'calc(100vh - 64px)',
         mx: 'auto',
         px: [3, 4],
-        pb: 5
+        pb: 5,
       }}
     >
       {props.children}
@@ -78,14 +78,14 @@ const Sidebar = props => (
       <Nav
         pathname={props.location.pathname}
         components={{
-          wrapper: Pagination
+          wrapper: Pagination,
         }}
       />
     </Box>
   </Flex>
 );
 
-export default props => {
+export default (props) => {
   const fullwidth = props.location.pathname === '/';
   const [menu, setMenu] = useState(false);
   const nav = useRef(null);
@@ -110,6 +110,11 @@ export default props => {
         <main id="content">{props.children}</main>
       )}
       <Footer />
+      <script
+        src="https://cdn.usefathom.com/script.js"
+        site="LSXMDMPF"
+        defer
+      ></script>
     </div>
   );
 };
